@@ -5,7 +5,6 @@ import Trust from "@/components/sections/Trust";
 import Projects from "@/components/sections/Projects";
 import CTA from "@/components/sections/CTA";
 import Contact from "@/components/sections/Contact";
-import StickyBar from "@/components/ui/StickyBar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import ScrollTop from "@/components/ui/ScrollTop";
@@ -30,8 +29,7 @@ export default function Home() {
       </main>
 <WhatsAppButton />
 <ScrollTop />
-      {/* Mobile CTA */}
-      <StickyBar />
+     
     </>
   );
 }
