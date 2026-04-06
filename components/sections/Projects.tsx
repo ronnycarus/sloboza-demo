@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 const projects = [
@@ -37,17 +36,13 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
 
           {projects.map((project, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="group bg-[#111] p-6 rounded-2xl border border-white/5 hover:border-orange-500/50 transition"
             >
 
               {/* Fake visual block */}
-              <div className="h-40 rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#222] flex items-center justify-center text-gray-500 text-sm">
+              <div className="h-40 rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#222] flex items-center justify-center text-gray-400 text-sm">
                 Project afbeelding
               </div>
 
@@ -63,7 +58,7 @@ export default function Projects() {
               {/* Hover line */}
               <div className="mt-6 h-[2px] w-0 bg-orange-500 group-hover:w-full transition-all duration-300" />
 
-            </motion.div>
+            </div>
           ))}
 
         </div>

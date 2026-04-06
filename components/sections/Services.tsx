@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 const services = [
@@ -39,12 +38,8 @@ export default function Services() {
         {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
           {services.map((service, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="group bg-gradient-to-b from-[#1a1a1a] to-[#111] p-6 rounded-2xl border border-white/5 hover:border-orange-500/50 transition"
             >
               <div className="text-orange-500 text-3xl mb-4">🛠️</div>
@@ -58,7 +53,7 @@ export default function Services() {
               </p>
 
               <div className="mt-6 h-[2px] w-0 bg-orange-500 group-hover:w-full transition-all duration-300" />
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>

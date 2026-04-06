@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Hero() {
   return (
     <section className="h-screen flex items-center bg-black relative overflow-hidden">
@@ -13,38 +11,23 @@ export default function Hero() {
 
         {/* LEFT */}
         <div>
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold leading-tight mb-6"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             Sloopwerk nodig?
             <br />
             <span className="text-orange-500">
               Wij regelen het snel en professioneel.
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-400 mb-6 text-lg"
-          >
+          <p className="text-gray-400 mb-6 text-lg">
             Specialist in sloopwerken, betonboringen en renovaties.
-          </motion.p>
+          </p>
 
-          <p className="text-sm text-gray-500 mb-6">
+          <p className="text-sm text-gray-400 mb-6">
             ✔ Gratis offerte • ✔ Binnen 24 uur reactie • ✔ Scherpe prijzen
           </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-wrap gap-4"
-          >
+          <div className="flex flex-wrap gap-4">
             <a
               href="#contact"
               className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
@@ -58,7 +41,7 @@ export default function Hero() {
             >
               Bel direct
             </a>
-          </motion.div>
+          </div>
 
           <p className="text-xs text-gray-600 mt-3">
             Vrijblijvend en zonder verplichtingen
@@ -68,18 +51,16 @@ export default function Hero() {
         {/* RIGHT VIDEO */}
         <div className="hidden md:block relative">
 
-          <motion.video
+          <video
             autoPlay
             loop
             muted
             playsInline
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
+            preload="none"
             className="w-full h-[400px] object-cover rounded-2xl brightness-50 contrast-125"
           >
             <source src="/hero.mp4" type="video/mp4" />
-          </motion.video>
+          </video>
 
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent rounded-2xl" />

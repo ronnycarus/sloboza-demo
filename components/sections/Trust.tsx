@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 const items = [
@@ -41,12 +40,8 @@ export default function Trust() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
 
           {items.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 hover:border-orange-500/40 transition"
             >
 
@@ -65,7 +60,7 @@ export default function Trust() {
                 {item.desc}
               </p>
 
-            </motion.div>
+            </div>
           ))}
 
         </div>

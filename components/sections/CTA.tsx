@@ -1,18 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 export default function CTA() {
   return (
     <section className="bg-gradient-to-r from-orange-500 to-yellow-400 py-12 md:py-16">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-xl mx-auto"
-        >
+        <div className="text-center max-w-xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-black">
             Klaar om uw project te starten?
           </h2>
@@ -36,7 +30,7 @@ export default function CTA() {
               Bel direct
             </a>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

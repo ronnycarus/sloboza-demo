@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 
 export default function Contact() {
@@ -11,11 +10,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-10 items-start">
 
           {/* LEFT */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold">
               Neem contact op
             </h2>
@@ -29,21 +24,21 @@ export default function Contact() {
             <div className="mt-8 space-y-5 text-gray-300">
 
               <div>
-                <p className="text-gray-500 text-sm">Telefoon</p>
+                <p className="text-gray-400 text-sm">Telefoon</p>
                 <a href="tel:+31624837855" className="hover:text-orange-500">
                   +31 6 248 378 55
                 </a>
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">E-mail</p>
+                <p className="text-gray-400 text-sm">E-mail</p>
                 <a href="mailto:info@sloboza.nl" className="hover:text-orange-500">
                   info@sloboza.nl
                 </a>
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">Adres</p>
+                <p className="text-gray-400 text-sm">Adres</p>
                 <p>
                   Koningin Julianastraat 13 <br />
                   2841 VL Moordrecht
@@ -51,15 +46,10 @@ export default function Contact() {
               </div>
 
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT FORM */}
-          <motion.form
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 space-y-4"
-          >
+          <form className="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 space-y-4">
 
             <input
               type="text"
@@ -86,7 +76,7 @@ export default function Contact() {
               Verstuur aanvraag
             </button>
 
-          </motion.form>
+          </form>
 
         </div>
 
